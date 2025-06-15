@@ -68,4 +68,60 @@ cd acis-insurance-analysis
 # Create virtual environment and install dependencies
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
-pip install -r requirements.tx
+pip install -r requirements.txt
+# 📦 Reproducible Data Pipeline with DVC
+
+This repository sets up a reproducible, version-controlled data pipeline using [Data Version Control (DVC)](https://dvc.org/), ensuring auditability, traceability, and compliance — essential for finance and insurance workflows.
+
+---
+
+## 🧾 Objective
+
+Establish a transparent and auditable pipeline for insurance data analysis by:
+
+- Tracking datasets using DVC.
+- Setting up local storage for versioned data.
+- Committing metadata to Git for reproducibility.
+- Pushing dataset versions to a local remote.
+
+---
+
+## 📁 Folder Structure
+
+.
+├── data/ # Folder containing datasets (tracked by DVC)
+├── .dvc/ # DVC metadata files
+├── .dvcignore # DVC ignore config
+├── README.md # This file
+├── .gitignore # Git ignore config
+├── requirements.txt # Python dependencies
+└── ...
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Install DVC
+
+pip install dvc
+2. Initialize DVC in Your Project
+
+dvc init
+git add .dvc .dvcignore .gitignore
+git commit -m "Initialize DVC tracking"
+
+3. Add Local Remote Storage
+
+mkdir -p /path/to/local/storage
+dvc remote add -d localstorage /path/to/local/storage
+git add .dvc/config
+git commit -m "Configure DVC local remote storage"
+
+4. Track Dataset with DVC
+
+dvc add data/insurance_data.txt
+git add data/insurance_data.txt.dvc
+git commit -m "Track insurance dataset with DVC"
+
+5. Push Dataset to Local Remote
+dvc push
