@@ -69,25 +69,18 @@ cd acis-insurance-analysis
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
-# 📦 Reproducible Data Pipeline with DVC
 
-This repository sets up a reproducible, version-controlled data pipeline using [Data Version Control (DVC)](https://dvc.org/), ensuring auditability, traceability, and compliance — essential for finance and insurance workflows.
+## **📌 𝗧𝗔𝗦𝗞𝗦 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗 (𝗧𝗔𝗦𝗞 𝟮)**
+** 🧾 Objective
 
----
+** Establish a transparent and auditable pipeline for insurance data analysis by:
 
-## 🧾 Objective
+**- Tracking datasets using DVC.
+**- Setting up local storage for versioned data.
+**- Committing metadata to Git for reproducibility.
+**- Pushing dataset versions to a local remote. 
 
-Establish a transparent and auditable pipeline for insurance data analysis by:
-
-- Tracking datasets using DVC.
-- Setting up local storage for versioned data.
-- Committing metadata to Git for reproducibility.
-- Pushing dataset versions to a local remote.
-
----
-
-## 📁 Folder Structure
-
+** 📁 Folder Structure
 .
 ├── data/ # Folder containing datasets (tracked by DVC)
 ├── .dvc/ # DVC metadata files
