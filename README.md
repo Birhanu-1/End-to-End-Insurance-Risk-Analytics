@@ -41,10 +41,10 @@ AlphaCare-Insurance-Analytics/
 │ └── insurance_data.csv
 │
 ├── notebooks/ # All analysis notebooks
-│ ├── 01_data_summary.ipynb
-│ ├── 02_eda_univariate.ipynb
-│ ├── 03_eda_bivariate.ipynb
-│ └── 04_visuals.ipynb
+│ ├── data_summary.ipynb
+│ ├── eda_univariate.ipynb
+│ ├── eda_bivariate.ipynb
+│ └── visuals.ipynb
 │
 ├── plots/ # Generated figures and plots
 │ └── loss_ratio_by_province.png
