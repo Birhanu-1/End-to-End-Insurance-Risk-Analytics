@@ -60,13 +60,16 @@ AlphaCare-Insurance-Analytics/
 
 ## 📦 Setup
 # Clone the repository
-git clone https://github.com/your-username/acis-insurance-analysis.git
-cd acis-insurance-analysis
+git clone https://github.com/Birhanu-1/End_to_End_Insurance_Risk_Analytics.git
+cd End_to_End_Insurance_Risk_Analytics
 
 # Create virtual environment and install dependencies
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
+
+
+
 
 ## **📌 𝗧𝗔𝗦𝗞𝗦 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗 (𝗧𝗔𝗦𝗞 𝟮)**
 ** 🧾 Objective
@@ -103,8 +106,8 @@ git commit -m "Initialize DVC tracking"
 
 3. Add Local Remote Storage
 
-mkdir -p /path/to/local/storage
-dvc remote add -d localstorage /path/to/local/storage
+mkdir -p D:\dvc-remote-storage
+dvc remote add -d localstorage D:\dvc-remote-storage
 git add .dvc/config
 git commit -m "Configure DVC local remote storage"
 
