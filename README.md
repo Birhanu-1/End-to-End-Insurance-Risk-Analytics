@@ -59,35 +59,29 @@ AlphaCare-Insurance-Analytics/
 
 
 ## 📦 Setup
-
-```bash
 # Clone the repository
-git clone https://github.com/your-username/acis-insurance-analysis.git
-cd acis-insurance-analysis
+git clone https://github.com/Birhanu-1/End_to_End_Insurance_Risk_Analytics.git
+cd End_to_End_Insurance_Risk_Analytics
 
 # Create virtual environment and install dependencies
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
-# 📦 Reproducible Data Pipeline with DVC
 
-This repository sets up a reproducible, version-controlled data pipeline using [Data Version Control (DVC)](https://dvc.org/), ensuring auditability, traceability, and compliance — essential for finance and insurance workflows.
 
----
 
-## 🧾 Objective
 
-Establish a transparent and auditable pipeline for insurance data analysis by:
+## **📌 𝗧𝗔𝗦𝗞𝗦 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗 (𝗧𝗔𝗦𝗞 𝟮)**
+** 🧾 Objective
 
-- Tracking datasets using DVC.
-- Setting up local storage for versioned data.
-- Committing metadata to Git for reproducibility.
-- Pushing dataset versions to a local remote.
+** Establish a transparent and auditable pipeline for insurance data analysis by:
 
----
+**- Tracking datasets using DVC.
+**- Setting up local storage for versioned data.
+**- Committing metadata to Git for reproducibility.
+**- Pushing dataset versions to a local remote. 
 
-## 📁 Folder Structure
-
+** 📁 Folder Structure
 .
 ├── data/ # Folder containing datasets (tracked by DVC)
 ├── .dvc/ # DVC metadata files
@@ -112,8 +106,8 @@ git commit -m "Initialize DVC tracking"
 
 3. Add Local Remote Storage
 
-mkdir -p /path/to/local/storage
-dvc remote add -d localstorage /path/to/local/storage
+mkdir -p D:\dvc-remote-storage
+dvc remote add -d localstorage D:\dvc-remote-storage
 git add .dvc/config
 git commit -m "Configure DVC local remote storage"
 
@@ -151,3 +145,4 @@ This phase focused on statistically validating business hypotheses using A/B tes
   - Significant risk variation exists across provinces and gender.
   - Certain zip codes show significantly different margins.
   - These findings support geographic and demographic segmentation for targeted premium adjustments.
+=======
