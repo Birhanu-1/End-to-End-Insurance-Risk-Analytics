@@ -119,3 +119,30 @@ git commit -m "Track insurance dataset with DVC"
 
 5. Push Dataset to Local Remote
 dvc push
+
+**📌 Tasks Completed (Task 3) 
+## **Tasks Completed (Task 3)**
+
+This phase focused on statistically validating business hypotheses using A/B testing methods:
+
+- **Metrics Defined**:
+  - **Claim Frequency**: Proportion of policies with at least one claim.
+  - **Claim Severity**: Average cost of a claim.
+  - **Margin**: TotalPremium - TotalClaims.
+
+- **Hypotheses Tested**:
+  - H₀: No risk differences across provinces ✅
+  - H₀: No risk differences between zip codes ✅
+  - H₀: No margin difference between zip codes ✅
+  - H₀: No significant gender-based risk difference ✅
+
+- **Statistical Tests Used**:
+  - One-way ANOVA for provinces
+  - t-tests for gender and margin comparisons
+  - Visualizations for comparison of distributions
+
+- **Key Findings**:
+  - Significant risk variation exists across provinces and gender.
+  - Certain zip codes show significantly different margins.
+  - These findings support geographic and demographic segmentation for targeted premium adjustments.
+=======
