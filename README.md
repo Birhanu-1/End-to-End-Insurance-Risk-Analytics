@@ -146,3 +146,75 @@ This phase focused on statistically validating business hypotheses using A/B tes
   - Certain zip codes show significantly different margins.
   - These findings support geographic and demographic segmentation for targeted premium adjustments.
 =======
+# Task-4: Risk-Based Insurance Pricing System
+
+## 📌 Objective
+This task focuses on building and evaluating machine learning models for dynamic, risk-based insurance pricing. The goal is to predict:
+1. **Claim Severity** for policies that have a claim (`TotalClaims > 0`)
+2. **Claim Probability** for all policies
+3. **Premium Optimization** using a risk-based formula:
+Premium = (Probability of Claim × Predicted Claim Severity) + Expense Loading + Profit Margin
+
+
+
+---
+
+## 🧪 Project Structure
+
+### `data_preprocessing.ipynb`
+- Loads and cleans the raw dataset
+- Handles missing values (median for numeric, 'Missing' for categorical)
+- Performs one-hot encoding on categorical variables
+- Splits data for:
+- Regression: Claim Severity
+- Classification: Claim Probability
+- Saves train-test splits using `joblib`
+
+### `model_training_and_evaluation.ipynb`
+- Trains multiple models:
+- **Regression**: `LinearRegression`, `RandomForest`, `XGBoost`
+- **Classification**: `RandomForest`, `XGBoost`
+- Evaluates models using:
+- **Regression**: RMSE, R²
+- **Classification**: Accuracy, Precision, Recall, F1-score, AUC
+- Calculates premiums using predicted probabilities and severities
+- Interprets best-performing models using **SHAP** values
+
+---
+
+## 🧠 Modeling Techniques
+
+### Claim Severity (Regression)
+- **Target**: `TotalClaims` (for policies with `TotalClaims > 0`)
+- **Metrics**: RMSE, R²
+- **Models**:
+- Linear Regression
+- Random Forest Regressor
+- XGBoost Regressor
+
+### Claim Probability (Classification)
+- **Target**: `HasClaim` (binary: 0/1)
+- **Metrics**: Accuracy, Precision, Recall, F1, ROC-AUC
+- **Models**:
+- Random Forest Classifier
+- XGBoost Classifier
+
+---
+
+## 📊 Model Interpretability
+
+### SHAP Analysis
+- Top 5–10 most influential features visualized via SHAP summary plots
+- Business insights extracted from SHAP values:
+> For example: "For every year older a vehicle is, the predicted claim amount increases by X Rand, holding other factors constant."
+
+---
+
+## 🛠️ Setup Instructions
+
+```bash
+# Clone the repo and navigate to task-4
+git checkout -b task-4
+
+# Install dependencies
+pip install -r requirements.txt
